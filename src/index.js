@@ -1,10 +1,10 @@
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
-
-import * as Constants from '@mapbox/mapbox-gl-draw/src/constants';
-import doubleClickZoom from '@mapbox/mapbox-gl-draw/src/lib/double_click_zoom';
-import createSupplementaryPoints from '@mapbox/mapbox-gl-draw/src/lib/create_supplementary_points';
-import * as CommonSelectors from '@mapbox/mapbox-gl-draw/src/lib/common_selectors';
-import moveFeatures from '@mapbox/mapbox-gl-draw/src/lib/move_features';
+console.log('global this', this)
+console.log('MapboxDraw', MapboxDraw)
+console.log('this.MapboxDraw', this.MapboxDraw)
+console.log('global.MapboxDraw', global.MapboxDraw)
+const Constants = this.MapboxDraw.constants;
+const {doubleClickZoom, createSupplementaryPoints, CommonSelectors, moveFeatures} = this.MapboxDraw.lib;
 
 import {lineString, point} from '@turf/helpers';
 import bearing from '@turf/bearing';
